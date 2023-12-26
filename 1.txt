@@ -1,0 +1,16 @@
+using System;
+using System.Numerics;
+using System.Runtime.InteropServices;
+
+public class Program{
+  static void Output(int M, int N){
+    if( N > M)
+    Output(M + 1, N );
+    Console.WriteLine(M);
+  }
+  
+  static void Main(){
+    int M = -99; int N = 0;
+    Output(M, N);
+  }
+}
