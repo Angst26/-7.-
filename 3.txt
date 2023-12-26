@@ -1,0 +1,22 @@
+const int size = 10;
+
+int[] array = new int[size];
+void fill_array(int[] arr){
+  Random rand = new Random();
+  for(int i = 0; i < arr.Length; i++){
+    arr[i] = rand.Next(1, 50);
+  }
+}
+
+void display(int[] arr, int number){
+System.Console.WriteLine(arr[number] + " " + number);
+
+  if(number == 0){
+    return;
+  }
+  display(array, number - 1);
+}
+
+fill_array(array);
+
+display(array, size - 1);
